@@ -8,16 +8,25 @@ const server = http.createServer((req, res) => {
     console.log(req.url)
     switch (req.url) {
         case '/':
+            res.statusCode = 200;
             path += "index.html"
             break;
         case '/contact-me':
+            res.statusCode = 200;
             path += "contact-me.html"
             console.log(path)
             break;
         case '/about':
+            res.statusCode = 200;
             path += "about.html"
             break;
+        case '/about-redirect':
+            res.setHeader('Location', '/about')
+            path += "about.html"
+            res.statusCode = 301;
+            break;
         default:
+            res.statusCode = 400;
             path += "404.html"
             break;
     }
@@ -30,8 +39,6 @@ const server = http.createServer((req, res) => {
         else {
             res.end(data);
         }
-
-
     })
 })
 
