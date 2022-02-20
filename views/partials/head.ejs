@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index | <%= title %></title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <!-- <style>
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
 
         body {
@@ -78,7 +78,35 @@
         }
 
         /* index styles */
+        .blogs a {
+            display: block;
+            margin: 40px 0;
+            padding-left: 30px;
+            border-left: 6px solid crimson;
+        }
+
+        .blogs a:hover h3 {
+            color: crimson;
+        }
+
         /* details styles */
+        .details {
+            position: relative;
+        }
+
+        .delete {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 50%;
+            padding: 8px;
+        }
+
+        .delete:hover {
+            cursor: pointer;
+            box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+        }
+
         /* create styles */
         .create-blog form {
             max-width: 400px;
@@ -111,6 +139,6 @@
             font-size: 1.2em;
             cursor: pointer;
         }
-    </style> -->
+    </style>
 
 </head>
