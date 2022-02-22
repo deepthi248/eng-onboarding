@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/header.ejs') %>
+
+<body>
+    <form action="/login">
+        <label for="email">E-mail</label>
+        <input name="email" type="email" required />
+        <div class="email error"></div>
+        <label for="password">Password</label>
+        <input name="password" type="password" required />
+        <div class="password error"></div>
+        <button>LogIn</button>
+    </form>
+
+    <script>
+        const form = document.querySelector('form')
+        form.addEventListener('submit', () => {
+            e.preventDefault();
+            const email = form.email.value;
+            const password = form.email.password
+        })
+    </script>
+</body>
+<%- include('./partials/footer.ejs') %>
+
+</html>
